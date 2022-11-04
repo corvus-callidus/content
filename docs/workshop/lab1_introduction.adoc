@@ -156,7 +156,7 @@ You will learn about parameterized rules by:
 
 {empty}
 
-. Customizing parameterized rule s.a. this `accounts_tmout` is very easy, as the rule does not have the timeout duration hard-coded--it is parameterized by a variable.
+. Customizing parameterized rule such as this `accounts_tmout` is very easy, as the rule does not have the timeout duration hard-coded--it is parameterized by a variable.
 As the description for the *Set Interactive Session Timeout* rule indicates, the rule uses the `var_accounts_tmout` variable.
 This is defined in the `var_accounts_tmout.var` file.
 Just as you did in the previous step, you can search for the variable definition:
@@ -238,11 +238,11 @@ The following sections describe the currently supported associated content types
 
 === Macros
 
-You have probably noticed strange snippets in the project's code s.a. `{{{ xccdf_value("var_accounts_tmout") }}}` in the `accounts_tmout` rule yaml.
+You have probably noticed strange snippets in the project's code such as `{{{ xccdf_value("var_accounts_tmout") }}}` in the `accounts_tmout` rule yaml.
 Those are link:https://palletsprojects.com/p/jinja/[jinja2 macros] with one minor syntax difference -- there is an additional layer of curly brackets to link:https://jinja.palletsprojects.com/en/latest/templates/#synopsis[regular jinja2 macros].
 That way, Ansible content that uses regular jinja2 doesn't interfere with the build system.
 
-Macros allow content authors to avoid writing complex directives s.a. variable substitution in rules or remediations, and they can also prevent copy-pasting of the code anywhere in the content.
+Macros allow content authors to avoid writing complex directives such as variable substitution in rules or remediations, and they can also prevent copy-pasting of the code anywhere in the content.
 Rules, remediations, checks and other definition files are processed by jinja2, so one can define own local macros there, or one can used shared macros that are available.
 Macros are defined in various `.jinja` files, and they are documented online on the link:https://complianceascode.readthedocs.io/en/latest/index.html[ComplianceAsCode readthedocs website].
 
